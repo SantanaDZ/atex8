@@ -6,6 +6,14 @@ import plotly.graph_objects as go
 import plotly.express as px
 import matplotlib.pyplot as plt
 
+st.markdown("""
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 
 
