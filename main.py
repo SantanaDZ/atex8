@@ -89,12 +89,13 @@ elif selected == "Pesquisa e Gráficos":
             ]
         })
         
+        '''Crescimento Estimado do Lixo Eletrônico no Brasil (2010–2024)'''
             # Gráfico animado de linha
         fig = px.line(
             dados1,
             x="Ano",
             y="Milhões de toneladas",
-            title="Crescimento Estimado do Lixo Eletrônico no Brasil (2010–2024)",
+            title=" ",
             markers=True,
         )
 
@@ -115,7 +116,7 @@ elif selected == "Pesquisa e Gráficos":
         # === Dados principais ===
         dados2= pd.DataFrame({
             'Ano': [2019, 2021, 2023],
-            'Lixo Eletrônico (milhões toneladas)': [2.0, 2.1, 2.3],
+            'Lixo Eletrônico (milhões toneladas)': [2.1, 2.25, 2.35],
             '% Reciclado': [2, 3, 4]
         })
 
@@ -156,11 +157,12 @@ elif selected == "Pesquisa e Gráficos":
 
         col3, col4 = st.columns(2)
         with col3:
+            ''' ***Composição do Lixo Eletrônico*** '''
             fig3 = px.pie(
                 composicao,
                 names='Categoria',
                 values='Porcentagem',
-                title='Composição do Lixo Eletrônico',
+                title='',
                 color_discrete_sequence=px.colors.sequential.RdBu
             )
             fig3.update_traces(textposition='inside', textinfo='percent+label')
@@ -177,12 +179,13 @@ elif selected == "Pesquisa e Gráficos":
         
         with col3:
             st.markdown("### 🧠 Percepção da População Brasileira sobre Lixo Eletrônico")
+            ''' **Já ouviu falar em lixo eletrônico (%)** '''
             fig4 = px.bar(
                 percepcao,
                 x='Região',
                 y='Porcentagem',
                 text='Porcentagem',
-                title='💬 Já ouviu falar em lixo eletrônico (%)',
+                title='',
                 color_discrete_sequence=['#6CA635']
         )
             fig4.update_traces(texttemplate='%{text}%', textposition='outside')
