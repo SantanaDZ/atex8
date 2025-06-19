@@ -2,8 +2,4 @@ themeMode = "light"
 
 [theme]
 base = "light"
-primaryColor = "#1f3b70"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f0f4f8"
-textColor = "#000000"
-font = "sans serif"
+"
