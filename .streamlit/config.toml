@@ -1,3 +1,5 @@
+themeMode = "light"
+
 [theme]
 base = "light"
 primaryColor = "#1f3b70"
