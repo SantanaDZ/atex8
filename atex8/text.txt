@@ -1,0 +1,157 @@
+# import streamlit as st
+# from streamlit_option_menu import option_menu
+
+# import streamlit as st
+# from streamlit_option_menu import option_menu
+
+# # Estilos personalizados com CSS
+# st.markdown("""
+#     <style>
+#     /* Cor de fundo do menu */
+#     .css-1d391kg {
+#         background-color: #F0F4F8; /* azul claro */
+#     }
+
+#     /* Cor ativa (selecionada) do item */
+#     .nav-link.active {
+#         background-color: #0066cc !important;
+#         color: white !important;
+#     }
+
+#     /* Cor do texto e ícones */
+#     .nav-link {
+#         color: #333 !important;
+#     }
+
+#     /* Hover */
+#     .nav-link:hover {
+#         background-color: #d6eaff !important;
+#         color: #000 !important;
+#     }
+#     </style>
+# """, unsafe_allow_html=True)
+
+# # Menu com option_menu (estrutura normal)
+# with st.sidebar:
+#     selected = option_menu(
+#         menu_title="Menu",
+#         options=["Home", "Sobre", "Contato"],
+#         icons=["house", "info-circle", "envelope"],
+#         menu_icon="cast",        
+#         orientation="horizontal"
+#     )
+
+# # Exibição simples
+# st.write(f"Você selecionou: {selected}")
+
+
+# # Seções com conteúdo
+# if selected == "Introdução":
+#     st.header("📘 Introdução")
+#     st.write("Conteúdo da introdução aqui...")
+
+# elif selected == "Pesquisa":
+#     st.header("📊 Pesquisa")
+
+#     # Submenu com abas horizontais
+#     tab1, tab2, tab3 = st.tabs(["Gráficos", "Tabelas", "Análises"])
+
+#     with tab1:
+#         st.subheader("📈 Gráficos")
+#         st.write("Visualizações interativas com matplotlib, seaborn ou plotly.")
+
+#     with tab2:
+#         st.subheader("📋 Tabelas")
+#         st.write("Visualização de dados em formato de tabela.")
+
+#     with tab3:
+#         st.subheader("🧠 Análises")
+#         st.write("Texto analítico com interpretações e conclusões.")
+
+# elif selected == "Panfleto":
+#     st.header("📄 Panfleto")
+#     st.write("Conteúdo do panfleto...")
+
+# elif selected == "Proposta de Atividade Prática":
+#     st.header("📝 Proposta de Atividade Prática")
+#     st.write("Descrição da proposta prática...")
+
+# elif selected == "Pontos de Coleta":
+#     st.header("📍 Pontos de Coleta")
+#     st.write("Locais onde a coleta de materiais pode ser feita.")
+
+
+import streamlit as st
+import plotly.express as px
+import time
+from streamlit_option_menu import option_menu
+
+with st.sidebar:
+    selected = option_menu(
+        menu_title="ATEX VIII - Home",  # Título opcional
+        options=[
+            "Introdução",
+            "Pesquisa e Gráficos",
+            "Panfleto Educativo",
+            "Proposta de Atividade Prática",
+            "Pontos de coleta"
+        ],
+        icons=["book", "bar-chart", "file-earmark-text", "clipboard-check", "geo-alt"],
+        menu_icon="house",  # Ícone do menu (acima)
+        styles={
+    "container": {"padding": "5px", "background-color": "#07070700"},
+    "nav-link": {"color": "#333"},
+    "nav-link-selected": {"background-color": "#092c60", "color": "white"},
+}
+
+        
+        
+    )
+
+
+
+if selected == "Proposta de Atividade Prática":
+    st.header("📝 Proposta de Atividade Prática Interativa")
+
+    # Objetivo e introdução
+    with st.expander("🎯 Objetivo da Atividade"):
+        st.markdown("""
+        Promover a conscientização dos moradores sobre os impactos ambientais do descarte inadequado de lixo eletrônico
+        e incentivar práticas corretas por meio de panfletos e pontos de coleta no condomínio.
+        """)
+
+    # Barra de progresso de campanha
+    st.subheader("📈 Progresso da Campanha")
+    progresso = st.progress(0)
+    for pct in range(0, 101, 10):
+        time.sleep(0.05)
+        progresso.progress(pct)
+    st.success("Campanha finalizada com sucesso!")
+
+    # Gráfico de itens coletados
+    st.subheader("📊 Itens Recolhidos")
+    dados = {
+        "Item": [
+            "Placa mãe", "SSD", "Memória RAM",
+            "Pilhas", "HD de notebook", "HD externo",
+            "Celulares"
+        ],
+        "Quantidade": [1, 1, 1, 2, 1, 1, 3]
+    }
+
+    fig = px.pie(
+        names=dados["Item"],
+        values=dados["Quantidade"],
+        title="Distribuição dos Itens Coletados",
+        color_discrete_sequence=px.colors.sequential.RdBu
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    # Resultado com imagem
+    st.subheader("📦 Registro Visual")
+    st.image("https://raw.githubusercontent.com/SantanaDZ/images-projects/refs/heads/main/atex8_imgs/ITENS_RECOLHIDOS.jpeg", width=500)
+
+    st.markdown("""
+    ✅ Todos os itens foram coletados e descartados corretamente.  
+    A campanha foi um sucesso dentro do condomínio!
+    """)
