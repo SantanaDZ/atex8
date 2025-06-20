@@ -71,9 +71,12 @@ if selected == "Introdução":
     - ♻️ Promover a **coleta correta** e o manejo ambientalmente saudável de resíduos eletrônicos.  
     - 🎨 Desenvolver a **criatividade, trabalho em equipe, comunicação e relações interpessoais** dos alunos.  
     - 🌱 Contribuir para a **redução da liberação de substâncias nocivas** ao ar, água e solo.
+
+
+    **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).**
     """)
 
-    ''' **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).** '''
+  
 
 
 
