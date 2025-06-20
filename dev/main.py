@@ -73,7 +73,7 @@ if selected == "Introdução":
     - 🌱 Contribuir para a **redução da liberação de substâncias nocivas** ao ar, água e solo.
     """)
 
-     ''' **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).** '''
+    ''' **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).** '''
 
 
 
