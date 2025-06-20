@@ -62,7 +62,7 @@ if selected == "Introdução":
     Este projeto, desenvolvido no contexto da disciplina ATEX VIII do curso de Análise e Desenvolvimento de Sistemas da UNIFENAS, tem como foco a conscientização sobre os impactos ambientais e sociais causados pelo descarte inadequado de lixo eletrônico. Por meio de uma aplicação interativa desenvolvida com Streamlit, o trabalho apresenta dados estatísticos, análises gráficas, informações legislativas e propostas educativas para estimular o descarte consciente e promover a logística reversa. Além disso, inclui uma atividade prática com coleta real de resíduos eletrônicos e mapeamento de pontos de coleta em Belo Horizonte, reforçando a importância da tecnologia como ferramenta de transformação ambiental e social.
 
                 
-    **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).**            
+               
     
                 
     Este projeto foi feito com base na ATEX VII, que tem como objetivos:
@@ -72,6 +72,8 @@ if selected == "Introdução":
     - 🎨 Desenvolver a **criatividade, trabalho em equipe, comunicação e relações interpessoais** dos alunos.  
     - 🌱 Contribuir para a **redução da liberação de substâncias nocivas** ao ar, água e solo.
     """)
+
+     ''' **Para explorar o conteúdo, utilize o menu lateral (ícone no canto superior esquerdo).** '''
 
 
 
